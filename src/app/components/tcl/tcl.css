@@ -1,0 +1,204 @@
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_buttonPDF{
+    padding: 1rem;
+    margin-left: 53%;
+    margin-top: 10px;
+}
+
+.submit_button{
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: 1px solid rgb(49, 179, 49);
+    background-color: #a1ff9e;
+}
+
+/************************
+    COMIENZO DEL TCL
+*************************/
+
+.TCL{
+    width: 60%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.TCL_header{
+    width: 100%;
+    height: 370px;
+    background-image: url(./../../../../public/encabezado_TCL.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 1px solid #000;
+}
+
+/*
+    SECCION DE LOS INPUTS
+*/
+
+/*
+    DESTINATARIO
+*/
+
+.form_section{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-between;
+    margin-top: 9.9rem;
+}
+
+.destinatario{
+    display: flex;
+    flex-direction: column;
+}
+
+.razon_social{
+    margin-top: 4px;
+    width: 420px;
+    height: 25px;
+    margin-left:3.2rem;
+    padding-left: 5px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+.ramo{
+    background: none;
+    margin-left: 3.2rem;
+    margin-top: 1.5rem;
+    height: 26px;
+    border: none;
+    padding-left: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.div_domicilio_codigo{
+    margin-left: 3.2rem;
+    margin-top: 1.3rem;
+    display: flex;
+}
+
+.domicilio{
+    background: none;
+    height: 26px;
+    border: none;
+    padding-left: 5px;
+    width: 290px;
+    margin-right: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.codigo_postal{
+    width: 125px;
+    background: none;
+    border: none;
+    padding-left: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.div_localidad_provincia{
+    margin-left: 3.2rem;
+    margin-top: 1.3rem;
+    display: flex;
+}
+
+.localidad{    
+    background: none;
+    height: 27px;
+    border: none;
+    padding-left: 5px;
+    width: 290px;
+    margin-right: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.provincia{
+    width: 125px;
+    background: none;
+    border: none;
+    padding-left: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+/*
+  FIN  DESTINATARIO
+*/
+
+
+/*
+    REMITENTE
+*/
+
+.remitente{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+    margin-top: 2px;
+}
+
+
+/*
+    FIN REMITENTE
+*/
+
+/*
+    FIN SECCION DE LOS INPUTS
+*/
+
+.TCL_div{
+    height: 600px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    textarea{
+        width: 95%;
+        height: 90%;
+        padding: 10px;
+        resize: none;
+        overflow: auto;
+        font-size: 1rem;
+        background-color: #E9EBF9;
+        border: none;
+    }
+}
+
+.TCL_footer{
+    width: 100%;
+    height: 209px;
+    background-image: url(./../../../../public/footer_TCL.jpg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #000;
+    border-top: none;
+
+}
+
+
+/************************
+    FIN DEL TCL
+*************************/

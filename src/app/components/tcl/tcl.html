@@ -1,0 +1,55 @@
+<form [formGroup]="tclFormGroup" >
+    <div class="div_buttonPDF">
+        <button class="submit_button"
+        type="button"
+        (click)="exportarPdf()"
+        [disabled]="tclFormGroup?.invalid || exportando"
+        >
+            {{ exportando ? 'Generando PDF...' : 'Exportar PDF' }}
+        </button>
+
+@if (errorPdf) {
+  <p role="alert">{{ errorPdf }}</p>
+}
+    </div>
+    <section class="TCL">
+        <header class="TCL_header">
+            <section class="form_section">
+                <div class="destinatario">
+                    <input type="text" placeholder="Apellido y nombre o razón social" class="razon_social" id="destinatario" formControlName="destinatario">
+                    <input type="text" placeholder="Ramo o actividad principal" class="ramo" id="actividad" formControlName="actividad">
+                    <div class="div_domicilio_codigo">
+                        <input type="text" placeholder="Domicilio labolral" class="domicilio" id="domicilioLaboral" formControlName="domicilioLaboral">
+                        <input type="text" placeholder="Codigo postal" class="codigo_postal" id="codigoPostalDestinatario" formControlName="codigoPostalDestinatario">
+                    </div>
+                    <div class="div_localidad_provincia">
+                        <input type="text" placeholder="Localidad" class="localidad" id="localidadDestinatario" formControlName="localidadDestinatario">
+                        <input type="text" placeholder="Provincia" class="provincia" id="provinciaDestinatario" formControlName="provinciaDestinatario">
+                    </div>
+                </div>
+                <div class="remitente">
+                    <input type="text" placeholder="Apellido y nombre" class="razon_social" id="remitente" formControlName="remitente">
+                    <div class="div_domicilio_codigo">
+                        <input type="text" placeholder="Nro DNI" class="domicilio" id="dni" formControlName="dni">
+                        <input type="text" placeholder="Fecha" class="codigo_postal" id="fecha" formControlName="fecha">
+                    </div>
+                    <div class="div_domicilio_codigo">
+                        <input type="text" placeholder="Domicilio" class="domicilio" id="domicilioReal" formControlName="domicilioReal">
+                        <input type="text" placeholder="Codigo Postal" class="codigo_postal" id="codigoPostalRemitente" formControlName="codigoPostalRemitente">
+                    </div>
+                    <div class="div_localidad_provincia">
+                        <input type="text" placeholder="Localidad" class="localidad" id="localidadRemitente" formControlName="localidadRemitente">
+                        <input type="text" placeholder="Provincia" class="provincia" id="provinciaRemitente" formControlName="provinciaRemitente">
+                    </div>
+                </div>
+            </section>
+        </header>
+        <div class="TCL_div">
+            <textarea name="cuerpoTCL" id="mensaje" formControlName="mensaje"></textarea>
+            
+        </div>
+        <footer class="TCL_footer">
+            
+        </footer>
+    </section>
+</form>

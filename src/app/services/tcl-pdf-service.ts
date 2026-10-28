@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PDFDocument, rgb, StandardFonts, PDFPage, PDFFont } from 'pdf-lib';
+import type { Color, PDFPage, PDFFont } from 'pdf-lib';
 import { TclData } from '../models/tcl.model';
 
 @Injectable({
@@ -8,6 +8,7 @@ import { TclData } from '../models/tcl.model';
 export class TclPdfService {
 
   async exportar(data: TclData): Promise<void> {
+    const { PDFDocument, rgb, StandardFonts } = await import('pdf-lib');
 
     // 1. Cargar la plantilla PDF del TCL.
     const response = await fetch(
@@ -84,6 +85,7 @@ export class TclPdfService {
       page,
       data.mensaje,
       font,
+      rgb(0, 0, 0),
       {
         x: 32,       // Posición horizontal del recuadro.
         top: 253,    // Distancia desde arriba hasta el recuadro.
@@ -127,6 +129,7 @@ export class TclPdfService {
     page: PDFPage,
     texto: string,
     font: PDFFont,
+    color: Color,
     caja: {
       x: number;
       top: number;
@@ -305,7 +308,7 @@ export class TclPdfService {
         y,
         size: resultado!.tamano,
         font,
-        color: rgb(0, 0, 0)
+        color
       });
     });
   }

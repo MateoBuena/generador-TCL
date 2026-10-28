@@ -1,4 +1,4 @@
-form{
+form {
     width: 100%;
     height: 100%;
     display: flex;
@@ -7,13 +7,15 @@ form{
     align-items: center;
 }
 
-.div_buttonPDF{
-    padding: 1rem;
-    margin-left: 53%;
+.div_buttonPDF {
+    width: min(993px, 90vw);
+    padding: 1rem 0;
     margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.submit_button{
+.submit_button {
     padding: 10px;
     border-radius: 25px;
     font-size: 1rem;
@@ -25,19 +27,20 @@ form{
     COMIENZO DEL TCL
 *************************/
 
-.TCL{
-    width: 60%;
+.TCL {
+    width: min(993px, 90vw);
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    container-type: inline-size;
 }
 
-.TCL_header{
+.TCL_header {
+    position: relative;
     width: 100%;
-    height: 370px;
+    aspect-ratio: 993 / 384;
     background-image: url(./../../../../public/encabezado_TCL.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     border-top: 1px solid #000;
@@ -47,158 +50,143 @@ form{
     SECCION DE LOS INPUTS
 */
 
-/*
-    DESTINATARIO
-*/
-
-.form_section{
+.form_section {
+    position: absolute;
+    top: 15.9cqw;
+    left: 0;
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 20.1cqw;
     justify-content: space-between;
-    margin-top: 9.9rem;
 }
 
-.destinatario{
+.destinatario {
     display: flex;
     flex-direction: column;
 }
 
-.razon_social{
-    margin-top: 4px;
-    width: 420px;
-    height: 25px;
-    margin-left:3.2rem;
-    padding-left: 5px;
+.razon_social {
+    margin-top: 0.6cqw;
+    width: 42.3cqw;
+    height: 2.5cqw;
+    margin-left: 5.1cqw;
+    padding-left: 0.5cqw;
     background: none;
     border: none;
-    font-size: 1rem;
+    font-size: 1.6cqw;
     outline: none;
 }
 
-
-.ramo{
+.ramo {
     background: none;
-    margin-left: 3.2rem;
-    margin-top: 1.5rem;
-    height: 26px;
+    margin-left: 5.1cqw;
+    margin-top: 2.6cqw;
+    height: 2.6cqw;
     border: none;
-    padding-left: 5px;
-    font-size: 1rem;
+    padding-left: 0.5cqw;
+    font-size: 1.6cqw;
     outline: none;
 }
 
-.div_domicilio_codigo{
-    margin-left: 3.2rem;
-    margin-top: 1.3rem;
+.div_domicilio_codigo {
+    margin-left: 5.1cqw;
+    margin-top: 2.3cqw;
     display: flex;
 }
 
-.domicilio{
+.domicilio {
     background: none;
-    height: 26px;
+    height: 2.6cqw;
     border: none;
-    padding-left: 5px;
-    width: 290px;
-    margin-right: 8px;
-    font-size: 1rem;
+    padding-left: 0.5cqw;
+    width: 29.2cqw;
+    margin-right: 0.8cqw;
+    font-size: 1.6cqw;
     outline: none;
 }
 
-.codigo_postal{
-    width: 125px;
+.codigo_postal {
+    width: 12.6cqw;
     background: none;
     border: none;
-    padding-left: 5px;
-    font-size: 1rem;
+    padding-left: 0.5cqw;
+    font-size: 1.6cqw;
     outline: none;
 }
 
-.div_localidad_provincia{
-    margin-left: 3.2rem;
-    margin-top: 1.3rem;
+.div_localidad_provincia {
+    margin-left: 5.1cqw;
+    margin-top: 2.3cqw;
     display: flex;
-}
-
-.localidad{    
-    background: none;
-    height: 27px;
-    border: none;
-    padding-left: 5px;
-    width: 290px;
-    margin-right: 8px;
-    font-size: 1rem;
     outline: none;
 }
 
-.provincia{
-    width: 125px;
+.localidad {
     background: none;
+    height: 2.7cqw;
     border: none;
-    padding-left: 5px;
-    font-size: 1rem;
+    padding-left: 0.5cqw;
+    width: 29.2cqw;
+    margin-right: 0.8cqw;
+    font-size: 1.6cqw;
     outline: none;
 }
 
+.provincia {
+    width: 12.6cqw;
+    background: none;
+    border: none;
+    padding-left: 0.5cqw;
+    font-size: 1.6cqw;
+    outline: none;
+}
 
-/*
-  FIN  DESTINATARIO
-*/
-
-
-/*
-    REMITENTE
-*/
-
-.remitente{
+.remitente {
     display: flex;
     flex-direction: column;
-    margin-right: 5rem;
-    margin-top: 2px;
+    margin-right: 8.1cqw;
+    margin-top: 0.2cqw;
 }
 
-
-/*
-    FIN REMITENTE
-*/
-
-/*
-    FIN SECCION DE LOS INPUTS
-*/
-
-.TCL_div{
-    height: 600px;
+.TCL_div {
+    height: 60.4cqw;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    textarea{
-        width: 95%;
-        height: 90%;
-        padding: 10px;
-        resize: none;
-        overflow: auto;
-        font-size: 1rem;
-        background-color: #E9EBF9;
-        border: none;
-    }
 }
 
-.TCL_footer{
+.TCL_div textarea {
+    width: 95%;
+    height: 90%;
+    padding: 1cqw;
+    resize: none;
+    overflow: auto;
+    font-size: 1.6cqw;
+    background-color: #E9EBF9;
+    border: none;
+    outline: none;
+}
+
+.TCL_footer {
     width: 100%;
-    height: 209px;
+    aspect-ratio: 988 / 205;
     background-image: url(./../../../../public/footer_TCL.jpg);
-    background-size:contain;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     border: 1px solid #000;
     border-top: none;
-
 }
-
 
 /************************
     FIN DEL TCL
 *************************/
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    .TCL,
+    .div_buttonPDF {
+        width: min(993px, calc(100vw - 2rem));
+    }
+}
